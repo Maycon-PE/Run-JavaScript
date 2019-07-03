@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+	width: 10px;
+	background: rgba(138, 133, 140, .4);
+}
+
+html::-webkit-scrollbar-thumb {
+	background: lime;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+body {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	background: linear-gradient(100deg, rgba(138, 133, 140, .4), rgb(138, 133, 140), rgba(138, 133, 140, .4), rgb(138, 133, 140), rgba(138, 133, 140, .4));
+}
+
+body {
+  ul, ol { list-style: none; }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

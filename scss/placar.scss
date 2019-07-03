@@ -1,0 +1,105 @@
+.area-placar {
+	grid-area: placar;
+	position: relative;
+	font-family: $font-placar;
+	padding-top: 20px;
+}
+
+.titulo-lideranca {
+	grid-area: titulo;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-weight: bold;
+	font-size: 23px;
+}
+
+[distancia] {
+	position: absolute;
+	right: 10px;
+}
+
+.liderancas {
+	position: relative;
+	grid-area: lideres;
+	background-color: aliceblue;
+	position: relative;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+[apresentacao-slide] {
+	user-select: none;
+	position: absolute;
+	display: block;
+	font-size: 40px;
+	top: 40%;
+	width: 400px;
+	display: none;
+	text-align: center;
+	@include transition(top 500s);
+}
+
+.liderancas p {
+	padding-left: 10px;
+	position: absolute;
+	font-size: 21px;
+	@include transition(top .5s ease-in);
+}
+
+[tempo] {
+	position: absolute;
+	left: 10px;
+}
+
+.liderancas p span {
+	color: darkorange;
+}
+
+.posicao1 {
+	top: -22px;
+}
+.posicao2 {
+	top: -3px;
+}
+.posicao3 {
+	top: 17px;
+}
+.posicao4 {
+	top: 37px;
+}
+
+#lideres {
+	padding-top: 20px;
+	overflow: hidden;
+	display: grid;
+	width: 100%;
+	max-width: 400px;
+	height: 100%;
+	margin: auto;
+	grid-template-columns: 100%;
+	grid-template-rows: 20% 80%;
+	grid-template-areas:
+		'titulo'
+		'lideres';
+}
+
+@media (max-width: 768px) {
+	.area-placar {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#lideres {
+		position: fixed;
+		height: 130px;
+		width: 100%;
+		max-width: 400px;
+		z-index: 10;
+		transition: opacity .5s;
+	}
+}

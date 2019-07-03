@@ -1,0 +1,49 @@
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+
+@mixin backgroundHover($color1, $color2, $color3) {
+  background: linear-gradient(30deg, $color1, $color2, $color3);
+}
+
+%scrollbar {
+  width: 10px;
+  background: rgba(138, 133, 140, .4);
+}
+
+%thumb {
+  background: lime;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+%redes-radius-base {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+%hover-redes {
+  top: 0%;
+  cursor: pointer;
+}
+
+
+$body-background: linear-gradient(100deg, rgba(138, 133, 140, .4), rgb(138, 133, 140), rgba(138, 133, 140, .4), rgb(138, 133, 140), rgba(138, 133, 140, .4));
+
+$font-placar: 'VT323', monospace;
+
+$font-lateral-informacoes: 'Karla', sans-serif;
+
+$font-principal: 'Play', sans-serif;
+
+$font-detalhes: 'Fredericka the Great', cursive;
+
+$font-velocimetro: 'ZCOOL KuaiLe', cursive;

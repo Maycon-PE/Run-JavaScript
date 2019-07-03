@@ -1,0 +1,154 @@
+.selectNone {
+	display: none;
+}
+
+.participantes {
+	text-align: center;
+	width: 247px;
+	color: white;
+	display: inline-block;
+	position: relative;
+	border: 1px dashed black;
+	background: linear-gradient(100deg, rgba(90, 90, 90, .4), rgb(90, 90, 90), rgba(90, 90, 90, .4));
+}
+
+.aproveitamento {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.ligar {
+	background: linear-gradient(to bottom, #909090, white);
+}
+
+.grau {
+	position: relative;
+	background: transparent;
+}
+
+.quebra {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+}
+
+.cambio {
+	position: absolute;
+	left: 24%;
+	top: 20%;
+}
+
+.categoria {
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.nitro {
+	position: absolute;
+	width: 14px;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.velocimetro {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.div-ponteiro {
+	position: absolute;
+	z-index: 1;
+	top: 39px;
+	left: 26px;
+}
+
+.ponteiro {
+	width: 67px;
+	@include transform(translate(0px, 0px) rotate(0deg));
+}
+
+.barras-nitros {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 14px;
+	height: 100%;
+	background: #909090;
+	z-index: 1;
+}
+
+.barras-nitros img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+
+.efeito-barra-nitro {
+	width: 14px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: linear-gradient(to top, blue, yellow, red);
+	border-radius: 10px;
+}
+
+.nomes-modelos span {
+	position: absolute;
+	font-size: 17px;
+	right: 0px;
+	color: red;
+	opacity: .7;
+}
+
+.grau span {
+	position: absolute;
+	background-color: springgreen;
+	left: 0px;
+	width: 0%;
+	font-size: 7px;
+	text-align: center;
+	height: 4px;
+	border: 0.2px	dashed black;
+}
+
+.velocidade {
+	position: absolute;
+	bottom: 6px;
+	z-index: 1;
+	left: 23%;
+	top: 75%;
+	font-family: $font-velocimetro;
+	font-size: 15px;
+	color: black;
+}
+
+.info-rapida {
+	display: none;
+	position: absolute;
+	z-index: 8;
+	border: 1px solid black;
+	padding: 6px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 10px white;
+	font-family: $font-lateral-informacoes;
+	background: linear-gradient(100deg, rgba(90, 90, 90, .7), rgb(90, 90, 90), rgba(90, 90, 90, .7));
+	color: white;
+}
+
+/* Efeito dos botões desabilitados */
+.desabilitado {
+	pointer-events: none;
+	opacity: .5;
+}

@@ -1,0 +1,54 @@
+.redes-sociais {
+	position: fixed;
+	z-index: 10;
+	width: 90px;
+	height: 38px;
+	left: 0px;
+}
+
+.redes-sociais div {
+	position: absolute;
+	display: inline-block;
+	background: white;
+	width: 34px;
+	border: 5px solid white;
+	@extend %redes-radius-base;
+	@include transition(top .5s);
+}
+
+.facebook {
+	left: 1px;
+	top: -100px;
+}
+
+.facebook:hover { @extend %hover-redes; }
+
+.github {
+	left: 38px;
+	top: -100px;
+}
+
+.github:hover { @extend %hover-redes; }
+
+.e-mail {
+	left: 75px;
+	top: -100px;
+}
+
+.e-mail:hover { @extend %hover-redes; }
+
+.detalhes {
+	left: 112px;
+	top: -100px;
+}
+
+.detalhes:hover { @extend %hover-redes; }
+
+.redes-sociais img {
+	width: 100%;
+}
+
+.redes-sociais i {
+	font-size: 27px;
+	margin-top: 10px;
+}

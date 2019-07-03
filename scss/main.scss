@@ -1,0 +1,25 @@
+.container {
+	display: grid;
+	min-height: 100vh;
+	grid-template-columns: 250px 1fr;
+	grid-template-rows: 150px 1fr .5fr;
+	grid-template-areas:
+		'lateral placar'
+		'lateral participantes'
+		'lateral info';
+}
+
+@media (max-width: 768px) {
+	.container {
+		position: relative;
+		display: grid;
+		min-height: 100vh;
+		grid-template-columns: 100%;
+		/* grid-template-rows: 110px 1fr 200px 1fr 100px; */
+		grid-template-areas:
+			'placar'
+			'participantes'
+			'info'
+			'lateral';
+	}
+}

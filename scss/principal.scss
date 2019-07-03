@@ -1,0 +1,118 @@
+.principal {
+	grid-area: principal;
+}
+
+.botoes {
+	position: relative;
+	grid-area: botoes;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+.botoes input {
+	margin: 0px 10px;
+	border-radius: 5px;
+	border: none;
+	padding: 10px 15px;
+	font-family: $font-principal;
+	@include transition(all .4s ease-in)
+}
+
+[aleatorio] {
+	/*background: linear-gradient(30deg, rgba(53, 51, 53, .4), rgba(53, 51, 53, 8), rgba(53, 51, 53, .4));*/
+	color: white;
+	box-shadow: 1px 1px 10px gray;
+	@include backgroundHover(rgba(53, 51, 53, .4), rgba(53, 51, 53, 8), rgba(53, 51, 53, .4));
+}
+
+[aleatorio]:hover {
+	cursor: pointer;
+	box-shadow: 3px 3px 10px gray;
+	@include backgroundHover(rgb(53, 51, 53), rgba(53, 51, 53, .4), rgb(53, 51, 53));
+}
+
+[correr] {
+	color: white;
+	box-shadow: 1px 1px 10px gray;
+	@include backgroundHover(rgba(35, 125, 5, .4), rgb(35, 125, 5), rgba(35, 125, 5, .4));
+}
+
+[correr]:hover {
+	cursor: pointer;
+	box-shadow: 3px 3px 10px gray;
+	@include backgroundHover(rgb(35, 125, 5), rgba(35, 125, 5, .4), rgb(35, 125, 5));
+}
+
+[limite] {
+	border: 2px solid lightblue;
+	border-radius: 3px;
+	box-shadow: 1px 1px 10px gray;
+	width: 103px;
+}
+
+[parar] {
+	color: white;
+	box-shadow: 1px 1px 10px gray;
+	@include backgroundHover(rgba(138, 12, 6, .4), rgb(138, 12, 6), rgba(138, 12, 6, .4));
+}
+
+[parar]:hover {
+	cursor: pointer;
+	box-shadow: 3px 3px 10px gray;
+	@include backgroundHover(rgb(138, 12, 6), rgba(138, 12, 6, .4), rgb(138, 12, 6));
+}
+
+/* Media da area dos botões */
+@media (max-width: 400px) {
+	.botoes input {
+		margin: 0px 3px;
+		border-radius: 5px;
+		border: none;
+		padding: 8px 10px;
+		transition: all .4s ease-in;
+	}
+}
+
+.area-participantes {
+	grid-area: participantes;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 50px;
+	grid-template-areas:
+		'principal'
+		'botoes';
+}
+
+.principal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-self: center;
+}
+
+.principal select {
+	background: rgba(255, 255, 255, .6);
+}
+
+.principal select:hover {
+	border: 1px solid lightblue;
+	box-shadow: 1px 1px 10px lightblue;
+}
+
+.principal table {
+	position: relative;
+	user-select: none;
+	width: 247px;
+	margin: 10px 5px;
+}
+
+.principal table td {
+	position: relative;
+	width: 123px;
+}
+
+.principal select {
+	user-select: all;
+}

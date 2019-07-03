@@ -1,0 +1,102 @@
+.area-info-scroll {
+	position: fixed;
+	grid-area: lateral;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding-top: 40px;
+	height: 100vh;
+	width: 250px;
+	background-color: rgb(99, 98, 119);
+	cursor: default;
+	font-family: $font-lateral-informacoes;
+}
+
+.area-info-scroll::-webkit-scrollbar {
+	width: 10px;
+}
+
+.area-info-scroll:hover::-webkit-scrollbar-thumb {
+	@extend %thumb;
+}
+
+.area-info-scroll ul {
+	padding-left: 10px;
+	padding-bottom: 50px;
+}
+.area-info-scroll ul h2 {
+	text-align: center;
+	border: 1px solid white;
+	color: white;
+	background: linear-gradient(100deg, #606060, #909090, #606060);
+	width: 80%;
+	border-radius: 10px;
+}
+.area-info-scroll ul li {
+	cursor: help;
+}
+
+[exibir-popup] {
+	position: relative;
+	height: 34px;
+	border-bottom: 0.5px solid rgba(156, 150, 155, .6);
+}
+
+[exibir-popup] .over {
+	position: absolute;
+	bottom: 1px;
+	color: rgb(230, 230, 230);
+}
+
+.popup-info {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: -100%;
+	background: linear-gradient(120deg, rgba(100, 193, 216, .4), rgb(100, 193, 216), rgba(100, 193, 216, .4));
+	border-radius: 9px;
+	padding: 2px;
+}
+
+/* Media da area lateral */
+@media (max-width: 768px) {
+	.area-info-scroll {
+		position: relative;
+		grid-area: lateral;
+		width: 100%;
+		margin-top: 0px;
+		height: 100%;
+		background-color: rgb(99, 98, 119);
+		cursor: default;
+		overflow: inherit;
+	}
+
+	.area-info-scroll ul {
+		width: 90%;
+		margin: auto;
+	}
+	.area-info-scroll ul h2 {
+		width: 100%;
+	}
+
+	/*[exibir-popup] {
+		position: relative;
+		height: 34px;
+		border-bottom: 0.5px solid rgba(156, 150, 155, .6);
+	}
+
+	[exibir-popup] .over {
+		position: absolute;
+		bottom: 1px;
+		color: rgb(230, 230, 230);
+	}
+
+	.popup-info {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: -100%;
+		background: linear-gradient(120deg, rgba(100, 193, 216, .4), rgb(100, 193, 216), rgba(100, 193, 216, .4));
+		border-radius: 9px;
+		padding: 2px;
+	}*/
+}

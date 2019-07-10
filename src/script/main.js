@@ -20,7 +20,7 @@ slide()
 efeitosScroll()
 
 lateral(pilotos(), carros())
-  .then(html =>document.querySelector('.area-info-scroll').innerHTML = html)
+  .then(html =>document.querySelector('.area-info').innerHTML = html)
   .then(() =>{
     document.querySelectorAll('[exibir-popup]').forEach(li =>{
       li.onmousemove = () => {
@@ -43,9 +43,6 @@ principal()
 
     const classCarro = carro()
     const classPiloto = piloto()
-
-    // const pilotos = pilotos()
-    // const carros = carros()
 
     const funcoesDeDefinicaoCarros = [escCarro1(), escCarro2(), escCarro3(), escCarro4()]
     const funcoesDeDefinicaoPilotos = [escPiloto1(), escPiloto2(), escPiloto3(), escPiloto4()]

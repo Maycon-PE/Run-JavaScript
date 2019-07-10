@@ -1,4 +1,4 @@
-.area-info-scroll {
+.area-info {
 	position: fixed;
 	grid-area: lateral;
 	overflow: hidden;
@@ -11,19 +11,11 @@
 	font-family: $font-lateral-informacoes;
 }
 
-.area-info-scroll::-webkit-scrollbar {
-	width: 10px;
-}
-
-.area-info-scroll:hover::-webkit-scrollbar-thumb {
-	@extend %thumb;
-}
-
-.area-info-scroll ul {
+.area-info ul {
 	padding-left: 10px;
 	padding-bottom: 50px;
 }
-.area-info-scroll ul h2 {
+.area-info ul h2 {
 	text-align: center;
 	border: 1px solid white;
 	color: white;
@@ -31,7 +23,7 @@
 	width: 80%;
 	border-radius: 10px;
 }
-.area-info-scroll ul li {
+.area-info ul li {
 	cursor: help;
 }
 
@@ -59,7 +51,7 @@
 
 /* Media da area lateral */
 @media (max-width: 768px) {
-	.area-info-scroll {
+	.area-info {
 		position: relative;
 		grid-area: lateral;
 		width: 100%;
@@ -70,33 +62,11 @@
 		overflow: inherit;
 	}
 
-	.area-info-scroll ul {
+	.area-info ul {
 		width: 90%;
 		margin: auto;
 	}
-	.area-info-scroll ul h2 {
+	.area-info ul h2 {
 		width: 100%;
 	}
-
-	/*[exibir-popup] {
-		position: relative;
-		height: 34px;
-		border-bottom: 0.5px solid rgba(156, 150, 155, .6);
-	}
-
-	[exibir-popup] .over {
-		position: absolute;
-		bottom: 1px;
-		color: rgb(230, 230, 230);
-	}
-
-	.popup-info {
-		display: none;
-		position: absolute;
-		right: 0;
-		top: -100%;
-		background: linear-gradient(120deg, rgba(100, 193, 216, .4), rgb(100, 193, 216), rgba(100, 193, 216, .4));
-		border-radius: 9px;
-		padding: 2px;
-	}*/
 }

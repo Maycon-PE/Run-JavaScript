@@ -1,22 +1,24 @@
 export default function lideranca() {
-  const resultado = prompt('Qual é seu nome? ')
-  let usuario = 'Anônimo'
-  if (resultado !== null) usuario = resultado.split(' ')[0]
+  let usuario = sessionStorage.getItem('user') || 'Anônimo'
+  if (usuario === 'Anônimo') {
+    usuario = prompt('Qual é seu nome? ').split(' ')[0]
+    if (usuario.length) sessionStorage.setItem('user', usuario)
+  }
   const data =  new Date()
-    let html = `
-      <div id="lideres">
-        <div class='titulo-lideranca'>
+  let html = `
+    <div id="lideres">
+      <div class='titulo-lideranca'>
         <span tempo>00:00:00</span>
-          <i class="fas fa-car-alt"></i> <i class="fas fa-car-crash"></i> &nbsp
-          <span class='span-liderea'>Lideres</span> &nbsp
-          <i class="fas fa-car-alt"></i> <i class="fas fa-car-alt"></i>
-          <span distancia></span>
-        </div>
-        <div class='liderancas' id="placar">`
+        <i class="fas fa-car-alt"></i> <i class="fas fa-car-crash"></i> &nbsp
+        <span class='span-liderea'>Lideres</span> &nbsp
+        <i class="fas fa-car-alt"></i> &nbsp <i class="fas fa-car-alt"></i>
+        <span distancia></span>
+      </div>
+      <div class='liderancas' id="placar">`
     for (let p = 1; p <= 4; p++) {
       html += placar(p)
     }
-    html += `<span apresentacao-slide>Bem-vindo(a) ${usuario !== ''? usuario: 'Anônimo'}</span>`
+    html += `<span apresentacao-slide>Bem-vindo(a) ${usuario !== ''? usuario : 'Anônimo'}</span>`
     html += '<span apresentacao-slide>Criado por Maycon Silva</span>'
     if (data.getHours() < 12) {
       html += `<span apresentacao-slide>Tenha um bom dia!</span>`

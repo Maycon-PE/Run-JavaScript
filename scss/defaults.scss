@@ -2,14 +2,11 @@
 	box-sizing: border-box;
 }
 html::-webkit-scrollbar {
-	width: 10px;
-	background: rgba(138, 133, 140, .4);
+	@extend %scrollbar;
 }
 
 html::-webkit-scrollbar-thumb {
-	background: lime;
-	border-radius: 5px;
-	border: 1px solid black;
+	@extend %thumb;
 }
 body {
 	padding: 0;
@@ -25,4 +22,12 @@ body {
     text-decoration: none;
     color: inherit;
   }
+}
+
+.scroll::-webkit-scrollbar {
+	@extend %scrollbar;
+}
+
+.scroll:hover::-webkit-scrollbar-thumb {
+	@extend %thumb;
 }

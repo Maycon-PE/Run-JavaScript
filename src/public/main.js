@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return scrolls; });\nfunction scrolls() {\r\n  window.onscroll = function() {\r\n    if (innerWidth <= 768) {\r\n      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {\r\n        document.getElementById(\"lideres\").style.opacity = \".6\";\r\n      } else {\r\n        document.getElementById(\"lideres\").style.opacity = \"1\";\r\n      }\r\n    }\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./src/script/components/css/efeitos-scroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return scrolls; });\nfunction scrolls() {\r\n  window.onscroll = function() {\r\n    if (innerWidth <= 768) {\r\n      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {\r\n        document.getElementById(\"lideres\").style.opacity = \".6\";\r\n      } else {\r\n        document.getElementById(\"lideres\").style.opacity = \"1\";\r\n      }\r\n    } else {\r\n    \tdocument.getElementById(\"lideres\").style.opacity = \"1\";\r\n    }\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./src/script/components/css/efeitos-scroll.js?");
 
 /***/ }),
 

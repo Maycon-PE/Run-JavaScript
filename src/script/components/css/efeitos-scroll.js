@@ -6,6 +6,8 @@ export default  function scrolls() {
       } else {
         document.getElementById("lideres").style.opacity = "1";
       }
+    } else {
+    	document.getElementById("lideres").style.opacity = "1";
     }
   }
 }

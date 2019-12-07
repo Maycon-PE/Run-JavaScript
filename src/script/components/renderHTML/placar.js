@@ -1,8 +1,13 @@
 export default function lideranca() {
   let usuario = sessionStorage.getItem('user') || 'Anônimo'
   if (usuario === 'Anônimo') {
-    usuario = prompt('Qual é seu nome? ').split(' ')[0]
-    if (usuario.length) sessionStorage.setItem('user', usuario)
+    usuario = prompt('Qual é seu nome? ') || 'Anônimo'
+    if (typeof usuario === 'string') {
+      if (usuario.length) {
+        sessionStorage.setItem('user', usuario)
+        usuario = usuario.split(' ')[0]
+      }
+    }
   }
   const data =  new Date()
   let html = `
@@ -27,7 +32,7 @@ export default function lideranca() {
     } else {
       html += `<span apresentacao-slide>Tenha uma boa noite!</span>`
     }
-    html += `<span apresentacao-slide>${data.getDate() < 10? '0' + data.getDate(): data.getDate()}/${data.getMonth() + 1 < 10? '0' + (data.getMonth() + 1): data.getMonth()}/${data.getFullYear()}</span>`
+    html += `<span apresentacao-slide>${data.getDate() < 10? '0' + data.getDate(): data.getDate()}/${data.getMonth() + 1 < 10? '0' + (data.getMonth() + 1): (data.getMonth() + 1)}/${data.getFullYear()}</span>`
     html += '</div></div>'
 
     return html

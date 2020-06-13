@@ -1,2 +1,2 @@
 # Run-JavaScript
-Javascript project without exception
+Projetinho de corrida em javascript

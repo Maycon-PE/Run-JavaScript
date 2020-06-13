@@ -4,17 +4,15 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "webpack --watch --config dev.webpack.config.js"
+    "dev": "webpack --watch --config dev.webpack.config.js",
+    "dev-ts": "tsc -w --module ESNext --target ESNext --outDir ./src/public ./src/script/index.ts",
+    "start": "electron ."
   },
   "author": "Maycon Silva",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "3.9.1",
-    "gulp-concat": "2.6.1",
-    "gulp-sass": "4.0.1",
-    "gulp-uglifycss": "1.0.9",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "electron": "^9.0.2",
+    "typescript": "^3.9.5"
   },
   "dependencies": {}
 }

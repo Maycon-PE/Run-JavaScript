@@ -1,10 +1,14 @@
 const { app, BrowserWindow } = require('electron')
 
+let win
+
 function createWindow () {
   // Cria uma janela de navegação.
-  let win = new BrowserWindow({
-    minWidth: 1000,
-    minHeight: 700,
+  win = new BrowserWindow({
+    minWidth: 1100,
+    minHeight: 500,
+    width: 1100,
+    height: 600,
     autoHideMenuBar: true,
     darkTheme: true,
     webPreferences: {

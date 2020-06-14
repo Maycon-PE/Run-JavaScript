@@ -104,13 +104,16 @@
 .principal table {
 	position: relative;
 	user-select: none;
-	width: 247px;
+	width: 270px;
 	margin: 10px 5px;
 }
 
 .principal table td {
 	position: relative;
-	width: 123px;
+	width: 134px;
+	font-family: sans-serif;
+	font-size: 15px;
+	letter-spacing: 1px;
 }
 
 .principal select {

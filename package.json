@@ -1,17 +1,24 @@
 {
   "name": "run-javascript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pratica",
+  "productName": "Run",
   "main": "main.js",
   "scripts": {
     "dev": "webpack --watch --config dev.webpack.config.js",
     "dev-ts": "tsc -w --module ESNext --target ESNext --outDir ./src/public ./src/script/index.ts",
-    "start": "electron ."
+    "dev-sass": "sass --watch scss/index.scss:src/css/index.css",
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=dist/win.ico --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=dist/win.ico --prune=true --out=release-builds --version-string.CompanyName=MS --version-string.FileDescription=CE --version-string.ProductName=\"Run\"",
+    "package-linux" : "electron-packager . --overwrite --platform=linux --arch=x64 --icon=dist/linux.png --prune=true --out=release-builds"
   },
   "author": "Maycon Silva",
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.2",
+    "electron-packager": "^14.2.1",
+    "sass": "^1.26.8",
     "typescript": "^3.9.5"
   },
   "dependencies": {}

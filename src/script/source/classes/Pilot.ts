@@ -1,26 +1,42 @@
 export type TSexo = 'M' | 'F'
 
 export interface IPilot {
-  nome: string,
-  sexo: TSexo,
-  nacionalidade: string,
-  habilidade: number,
-  src: string
+  nome?: string,
+  sexo?: TSexo,
+  nacionalidade?: string,
+  habilidade?: number,
+  src?: string
 }
 
 export default class Pilot {
-  readonly nome: string
-  readonly sexo: TSexo
-  readonly nacionalidade: string
-  readonly habilidade: number
-  readonly src: string
+  private nome: string
+  private sexo: TSexo
+  private nacionalidade: string
+  private habilidade: number
+  private src: string
 
-  constructor({ src, habilidade, nacionalidade, sexo, nome }: IPilot) {
+  constructor({ src = '', habilidade = 0, nacionalidade = '', sexo = 'M', nome = 'nulo' }: IPilot) {
     this.nome = nome
     this.src = src
     this.sexo = sexo
     this.nacionalidade = nacionalidade
     this.habilidade = habilidade
+  }
+
+  get getNome() {
+    return this.nome
+  }
+  get getSexo() {
+    return this.sexo
+  }
+  get getNacionalidade() {
+    return this.nacionalidade
+  }
+  get getHabilidade() {
+    return this.habilidade
+  }
+  get getSrc() {
+    return this.src
   }
 }
 
